@@ -60,7 +60,7 @@ function Settings(props) {
 export default class Automata extends React.Component {
 
 	changeSpeed(e) {
-		console.log(e);
+		//console.log(e);
 
 		this.setState({
 			speed: e.target.value
@@ -79,7 +79,9 @@ export default class Automata extends React.Component {
 
 		this.setState({
 			alive: newAlive
-		}, () => { console.log("tile updated", this.state); });
+		}, () => {
+			//console.log("tile updated", this.state);
+		});
 
 
 	}
@@ -87,7 +89,7 @@ export default class Automata extends React.Component {
 	toggleRun(e) {
 		e.preventDefault();
 		//console.log("fired", this.state.running);
-		console.log("run toggled", this.state);
+		//console.log("run toggled", this.state);
 
 		let start = !this.state.running;
 
@@ -101,7 +103,9 @@ export default class Automata extends React.Component {
 			this.setState({
 				running: start,
 				runInterval: interval
-			}, () => { console.log("state updated to run", this.state.alive, this.state); });
+			}, () => {
+				//console.log("state updated to run", this.state.alive, this.state);
+			});
 
 		} else {
 			interval = this.state.runInterval;
@@ -109,7 +113,9 @@ export default class Automata extends React.Component {
 			this.setState({
 				running: start,
 				runInterval: null
-			}, () => { console.log("state updated to stop run", this.state.alive, this.state); });
+			}, () => {
+				//console.log("state updated to stop run", this.state.alive, this.state);
+			});
 		}
 
 
@@ -172,7 +178,7 @@ export default class Automata extends React.Component {
 						break;
 				}
 
-				console.log("updaing grid (" + i + "," + j + ") n =", neighbours, ":", currentState.at(i).at(j), " to: ", nextState[i][j]);
+				// console.log("updaing grid (" + i + "," + j + ") n =", neighbours, ":", currentState.at(i).at(j), " to: ", nextState[i][j]);
 			}
 		}
 
@@ -181,7 +187,9 @@ export default class Automata extends React.Component {
 		this.setState({
 			alive: nextState,
 			cycles: clock
-		}, () => { console.log("tick:", clock, "now:", currentState, "next:", nextState); });
+		}, () => {
+			//console.log("tick:", clock, "now:", currentState, "next:", nextState);
+		});
 
 
 
@@ -199,7 +207,9 @@ export default class Automata extends React.Component {
 			alive: startingGrid,
 			running: false,
 			cycles: 0
-		}, () => { console.log("grid reset") });
+		}, () => {
+			//console.log("grid reset")
+		});
 	}
 
 	/*getSnapshotBeforeUpdate(prevProps, prevState) {
@@ -231,8 +241,8 @@ export default class Automata extends React.Component {
 			squares: 50
 		};
 
-		console.log("starting state", this.state.alive);
-		console.log("running", this.state.running);
+		//console.log("starting state", this.state.alive);
+		//console.log("running", this.state.running);
 		this.toggleCell = this.toggleCell.bind(this);
 		this.toggleRun = this.toggleRun.bind(this);
 		this.updateGrid = this.updateGrid.bind(this);
@@ -243,7 +253,7 @@ export default class Automata extends React.Component {
 
 	render() {
 
-		console.log("current render state", this.state);
+		//console.log("current render state", this.state);
 
 		return (
 			<>
