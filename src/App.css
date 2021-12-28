@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.grid, .settings {
+  display: block;
+  margin: 25px 25px 0;
+}
+
+.row {
+  display: block;
+  margin: 0;
+ /* height: 80px;*/
+}
+
+.tile {
+						display: inline-block;
+				/*	width: 80px;
+					height: 80px;*/
+          border: 1px solid black;
+}
+
+.active {
+  background-color: rebeccapurple;
+}
+
+button, label {
+  margin-right: 4px;
+}
+
+input {
+  width: 50px;
+}
