@@ -10,6 +10,8 @@ Download the code and in the `automata` folder type
 
 Defaults to [http://localhost:3000](http://localhost:3000) in your browser.
 
+![Demo](demo.gif)
+
 ## What you can do
 
 - Click the squares to toggle alive/dead cells.
